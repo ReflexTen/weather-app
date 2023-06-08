@@ -1,0 +1,41 @@
+<header class="header">
+  <div class="container">
+    <div class="header__box">
+      <div class="header__location">
+        <h2 class="header__city"></h2>
+        <div class="header__selection selection">
+          <button class="selection__city">Сменить город</button>
+          <button class="selection__location">Мое местоположение</button>
+        </div>
+      </div>
+      <form class="header__form hidden">
+        <label class="sr-only" for="change-city"></label>
+        <input
+          class="header__form-input"
+          name="change-city"
+          type="text"
+          placeholder="Введите город"
+          required
+        />
+        <button class="header__form-button" type="submit">ОК</button>
+      </form>
+      <ul class="header__measure measure">
+        <li
+          class="measure__degrees measure__degrees-celcius measure__degrees--active"
+        >
+          C
+        </li>
+        <li class="measure__degrees measure__degrees-fahrenheit">F</li>
+      </ul>
+
+      <div class="header__error">
+        Вы ввели не корректное название города
+        <img
+          class="header__error-img"
+          src="./images/icons/error.svg"
+          alt="знак ошибки"
+        />
+      </div>
+    </div>
+  </div>
+</header>

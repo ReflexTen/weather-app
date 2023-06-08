@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="favicons/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="favicons/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="favicons/favicon-16x16.png"
+  />
+  <link rel="manifest" href="favicons/site.webmanifest" />
+
+  <title>Погода</title>
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
+
+  <body>
+    <header class="header">
+  <div class="container">
+    <div class="header__box">
+      <div class="header__location">
+        <h2 class="header__city"></h2>
+        <div class="header__selection selection">
+          <button class="selection__city">Сменить город</button>
+          <button class="selection__location">Мое местоположение</button>
+        </div>
+      </div>
+      <form class="header__form hidden">
+        <label class="sr-only" for="change-city"></label>
+        <input
+          class="header__form-input"
+          name="change-city"
+          type="text"
+          placeholder="Введите город"
+          required
+        />
+        <button class="header__form-button" type="submit">ОК</button>
+      </form>
+      <ul class="header__measure measure">
+        <li
+          class="measure__degrees measure__degrees-celcius measure__degrees--active"
+        >
+          C
+        </li>
+        <li class="measure__degrees measure__degrees-fahrenheit">F</li>
+      </ul>
+
+      <div class="header__error">
+        Вы ввели не корректное название города
+        <img
+          class="header__error-img"
+          src="./images/icons/error.svg"
+          alt="знак ошибки"
+        />
+      </div>
+    </div>
+  </div>
+</header>
+
+
+    <main class="main">
+      <h1 class="sr-only">Температура</h1>
+
+      <section class="temperature">
+  <div class="container">
+    <div class="temperature__box">
+      <img class="temperature__image" src="" alt="иконка погоды" />
+      <h1 class="temperature__num"></h1>
+      <ul class="temperature__measure">
+        <li class="temperature__measure-celcius">o</li>
+        <li class="temperature__measure-fahrenheit">f</li>
+      </ul>
+    </div>
+    <div class="temperature__info">Солнечно</div>
+  </div>
+</section>
+
+    </main>
+
+    <footer class="footer">
+  <div class="container">
+    <ul class="weather-info">
+      <li class="weather-info__box">
+        <div class="weather-info__index">Ветер</div>
+        <div class="weather-info__data weather-info__data-wind">
+          5 м/c, западный
+        </div>
+      </li>
+
+      <li class="weather-info__box">
+        <div class="weather-info__index">Давление</div>
+        <div class="weather-info__data weather-info__data-pressure">
+          752 мм рт. ст.
+        </div>
+      </li>
+
+      <li class="weather-info__box">
+        <div class="weather-info__index">Влажность</div>
+        <div class="weather-info__data weather-info__data-humidity">60%</div>
+      </li>
+
+      <li class="weather-info__box">
+        <div class="weather-info__index">Облачность</div>
+        <div class="weather-info__data weather-info__data-clouds">10%</div>
+      </li>
+    </ul>
+  </div>
+</footer>
+
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

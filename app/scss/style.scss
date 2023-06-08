@@ -1,0 +1,19 @@
+//Подключение базовых стилей
+@import 'common/vars';
+@import 'common/fonts';
+@import 'common/reset';
+@import 'common/libs';
+@import 'common/global';
+
+//Подключение компонентов
+
+//Подключение секций//************************
+
+// header
+@import 'header';
+
+// main
+@import 'section/temperature';
+
+//footer
+@import 'footer';

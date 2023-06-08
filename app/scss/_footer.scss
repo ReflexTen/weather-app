@@ -1,0 +1,33 @@
+.footer {
+}
+
+.weather-info {
+  display: flex;
+  justify-content: space-between;
+  @include media-3 {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  // .weather-info__box
+  &__box {
+    @include media-3 {
+      margin-bottom: 15px;
+    }
+  }
+  // .weather-info__index
+  &__index {
+    font-size: 18px;
+    line-height: 22px;
+    opacity: 0.6;
+  }
+  // .weather-info__data
+  &__data {
+    font-size: 25px;
+    line-height: 30px;
+
+    @include media-3 {
+      font-size: 20px;
+    }
+  }
+}
